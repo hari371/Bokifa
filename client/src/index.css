@@ -1,0 +1,78 @@
+
+@import "tailwindcss";
+
+@theme {
+	--color-primary: #027a36;
+	--color-primary-hover: #014d22;
+	--color-secondary: #f9f5f0;
+	--color-background: #ffffff;
+	--color-foreground: #000000;
+	--color-muted: #666666;
+	--color-border: #e5e5e5;
+
+	--font-sans: Arial, Helvetica, sans-serif;
+}
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+}
+
+
+
+.marquee-track {
+	display: flex;
+	width: max-content;
+	animation: marquee 16s linear infinite;
+}
+
+.marquee-track p {
+	flex-shrink: 0;
+	width: 66.666vw;
+	text-align: center;
+	white-space: nowrap;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-66.666vw);
+	}
+}
+
+
+.bokifa-hero .swiper-pagination {
+	bottom: 24px;
+}
+
+.bokifa-hero .swiper-pagination-bullet {
+	background: white;
+	opacity: 0.6;
+}
+
+.bokifa-hero .swiper-pagination-bullet-active {
+	background: var(--color-primary);
+	opacity: 1;
+}
+
+.bokifa-hero .swiper-button-prev,
+.bokifa-hero .swiper-button-next {
+	color: white;
+}
+
+.bokifa-hero .swiper-button-prev::after,
+.bokifa-hero .swiper-button-next::after {
+	font-size: 22px;
+}
+
+@media (max-width: 640px) {
+	.bokifa-hero .swiper-button-prev,
+	.bokifa-hero .swiper-button-next {
+		display: none;
+	}
+}
+
+
